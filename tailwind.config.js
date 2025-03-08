@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       width: {
-        '30%': '30%'
+        '30%': '30%',
+        '23.5%': '23.5%'
       },
       colors: {
         primary: {

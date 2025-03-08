@@ -6,6 +6,7 @@ import WhoWeHelpSection from './components/WhoWeHelpSection';
 import AboutUsSection from './components/AboutUsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import WhereDoWeStandSection from './components/WhereDoWeStandSection';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Navbar />
       <HeroSection />
       <ImpactsSection />
+      <WhereDoWeStandSection />
       <WhoWeHelpSection />
       <AboutUsSection />
       <ContactSection />
