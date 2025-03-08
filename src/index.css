@@ -1,4 +1,115 @@
-/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #7FFFD4;
+  --dark-bg: #0B0F17;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-gray-800 antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+  }
+
+  .btn-secondary {
+    @apply bg-[#7FFFD4] text-black hover:bg-[#5FFFC4];
+  }
+
+  .section-title {
+    @apply text-4xl font-bold text-gray-800 mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-xl text-gray-600 max-w-3xl mx-auto;
+  }
+}
+
+/* Custom Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Form Styles */
+input:focus, textarea:focus {
+  @apply outline-none ring-2 ring-blue-200 border-blue-500;
+}
+
+/* Navigation Styles */
+.nav-link {
+  @apply text-gray-600 hover:text-blue-600 transition-colors duration-300;
+}
+
+/* Card Styles */
+.service-card {
+  @apply bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300;
+}
+
+/* Hero Section Background */
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(0,123,255,0.1) 0%, rgba(127,255,212,0.1) 100%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+/* Loading Animation */
+.loading {
+  @apply relative inline-block w-4 h-4;
+}
+
+.loading::after {
+  content: '';
+  @apply absolute inset-0 rounded-full border-2 border-blue-500 border-t-transparent animate-spin;
+}

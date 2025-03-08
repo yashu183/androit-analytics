@@ -1,7 +1,8 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
-import ServicesSection from './components/ServicesSection';
+import ImpactsSection from './components/ImpactsSection';
+import WhoWeHelpSection from './components/WhoWeHelpSection';
 import AboutUsSection from './components/AboutUsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
@@ -11,7 +12,8 @@ const App = () => {
     <div className="App">
       <Navbar />
       <HeroSection />
-      <ServicesSection />
+      <ImpactsSection />
+      <WhoWeHelpSection />
       <AboutUsSection />
       <ContactSection />
       <Footer />
