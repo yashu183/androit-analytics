@@ -6,6 +6,8 @@ import {
   faFacebook, 
   faInstagram 
 } from '@fortawesome/free-brands-svg-icons';
+import AndroitAnalyticsLogo from '../images/AndroitAnalyticsLogo.jpeg'; 
+
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -19,7 +21,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
-                <div className="text-gray-900 text-lg font-bold">A</div>
+                <img src={AndroitAnalyticsLogo} alt="Company Logo" />
               </div>
               <span className="text-2xl font-bold text-white">
                 Androit <span className="text-yellow-500">Analytics</span>
@@ -49,11 +51,16 @@ const Footer = () => {
           <div>
             <h3 className="text-white text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
-              <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>
+              {/* <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>
               <li><a href="#solutions" className="hover:text-white transition-colors">Solutions</a></li>
               <li><a href="#industries" className="hover:text-white transition-colors">Industries</a></li>
               <li><a href="#about" className="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
+              <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li> */}
+              <h4 className="hover:text-white transition-colors">Services</h4>
+              <h4 className="hover:text-white transition-colors">Solutions</h4>
+              <h4 className="hover:text-white transition-colors">Industries</h4>
+              <h4 className="hover:text-white transition-colors">About Us</h4>
+              <h4 className="hover:text-white transition-colors">Contact</h4>
             </ul>
           </div>
 
