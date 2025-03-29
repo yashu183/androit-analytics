@@ -7,6 +7,7 @@ import AboutUsSection from './components/AboutUsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import WhereDoWeStandSection from './components/WhereDoWeStandSection';
+import OurExpertiseSection from './components/OurExpertise';
 
 const App = () => {
   return (
@@ -15,8 +16,9 @@ const App = () => {
       <HeroSection />
       <ImpactsSection />
       <WhereDoWeStandSection />
+      <OurExpertiseSection/>
       <WhoWeHelpSection />
-      <AboutUsSection />
+      {/* <AboutUsSection /> */}
       <ContactSection />
       <Footer />
     </div>
