@@ -1,62 +1,46 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ArrowLeft, ArrowRight, Building, Cpu, ChartNetwork, Crosshair, ChartCandlestick, CloudUpload } from 'lucide-react';
 
-import { 
-  faBuilding, 
-  // faIndustry, 
-  // faStore, 
-  // faHospital, 
-  // faUniversity, 
-  // faHandshake,
-  faMicrochip,
-  faMagnifyingGlassChart,
-  faChessRook,
-  faChartSimple,
-  faCloudArrowUp
-  
-} from '@fortawesome/free-solid-svg-icons';
 const ExpertiseCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState('');
 
-  // Sample expertise data - replace with your actual content
   const expertiseCards = [
     {
       id: 1,
       title: "Business Intelligence (BI) Solutions",
       description: "We craft advanced BI solutions, transforming raw data into actionable insights and visualizations.",
-      icon: faBuilding
+      icon: <Building size={30} strokeWidth={2} />
     },
     {
       id: 2,
       title: "AI & Machine Learning Solutions",
       description: "Our AI and ML solutions predict trends, automate processes, and enhance decision-making.",
-      icon: faMicrochip
+      icon: <Cpu size={30} strokeWidth={2} />
     },
     {
       id: 3,
       title: "Advanced Data Analytics",
       description: "We help organizations uncover patterns and trends for strategic decisions through data analysis.",
-      icon: faMagnifyingGlassChart
+      icon: <ChartNetwork size={30} strokeWidth={2} />
     },
     {
       id: 4,
       title: "Data Strategy & Governance",
       description: "We develop data strategies and governance frameworks ensuring quality, security, and compliance.",
-      icon: faChessRook
+      icon: <Crosshair size={30} strokeWidth={2} />
     },
     {
       id: 5,
       title: "Data Visualization & Storytelling",
       description: "We design impactful data visualizations that simplify complexity and enhance insight communication.",
-      icon: faChartSimple
+      icon: <ChartCandlestick size={30} strokeWidth={2} />
     },
     {
       id: 6,
       title: "Cloud & Big Data Solutions",
       description: "We build scalable cloud and big data solutions for real-time analytics and innovation.",
-      icon: faCloudArrowUp
+      icon: <CloudUpload size={30} strokeWidth={2} />
     }
     
   ];
@@ -89,10 +73,8 @@ const ExpertiseCarousel = () => {
         <h2 className="text-2xl font-bold text-center mb-8 text-primary-dark">Our Expertise</h2>
         
         <div className="relative overflow-hidden py-4">
-          {/* Cards container */}
           <div className="relative h-80">
             {expertiseCards.map((card, index) => {
-              // Only render nearby cards for performance
               if (Math.abs(index - currentIndex) > 2 && 
                   !(index === expertiseCards.length - 1 && currentIndex === 0) && 
                   !(index === 0 && currentIndex === expertiseCards.length - 1)) {
@@ -136,7 +118,7 @@ const ExpertiseCarousel = () => {
                 >
                   <div className="bg-white rounded-lg shadow-lg p-6 h-64 flex flex-col justify-between border border-gray-200">
                     <div className="text-6xl mb-4 text-center justify-items-center text-primary-dark">
-                      <FontAwesomeIcon icon={card.icon} className="text-3xl" />
+                      {card.icon}
                     </div>
                     <h3 className="text-xl font-bold mb-2 text-center text-primary-dark">{card.title}</h3>
                     <p className="text-gray-600 text-center">{card.description}</p>

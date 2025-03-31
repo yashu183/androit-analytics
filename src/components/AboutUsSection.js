@@ -1,11 +1,9 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrophy, faUsers, faGlobe, faCertificate } from '@fortawesome/free-solid-svg-icons';
 
 const StatCard = ({ icon, number, label }) => (
   <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
     <div className="text-primary mb-4">
-      <FontAwesomeIcon icon={icon} className="text-4xl" />
+      {/* <FontAwesomeIcon icon={icon} className="text-4xl" /> */}
     </div>
     <div className="text-3xl font-bold text-secondary mb-2">{number}</div>
     <div className="text-gray-600">{label}</div>
@@ -15,22 +13,22 @@ const StatCard = ({ icon, number, label }) => (
 const AboutUsSection = () => {
   const stats = [
     {
-      icon: faTrophy,
+      icon: "faTrophy",
       number: "10+",
       label: "Years Experience"
     },
     {
-      icon: faUsers,
+      icon: "faUsers",
       number: "200+",
       label: "Happy Clients"
     },
     {
-      icon: faGlobe,
+      icon: "faGlobe",
       number: "15+",
       label: "Countries Served"
     },
     {
-      icon: faCertificate,
+      icon: "faCertificate",
       number: "50+",
       label: "Data Experts"
     }

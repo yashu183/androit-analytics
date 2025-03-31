@@ -1,6 +1,5 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { ExternalLink } from 'lucide-react';
 
 const WhereDoWeStandSection = () => {
   const maturityLevels = [
@@ -132,8 +131,10 @@ const WhereDoWeStandSection = () => {
           target='_blank'
           rel='noreferrer'
         >
-          Begin Your Journey
-          <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='ml-2'/>
+          <div className='flex'>
+            <p>Begin Your Journey</p>
+            <ExternalLink size={18} className='ml-2' />
+          </div>
         </a>
       </div>
     </section>

@@ -1,6 +1,5 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { ArrowRight } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -20,7 +19,7 @@ const HeroSection = () => {
             onClick={() => window.location.href = '#contact'}
           >
             Get a Free Consultation
-            <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+            <ArrowRight />
           </button>
         </div>
 

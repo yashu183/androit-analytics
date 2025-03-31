@@ -1,6 +1,5 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { ExternalLink } from 'lucide-react';
 
 const ImpactCard = ({ title, content, points, source }) => (
   <div className="bg-white w-4/5 md:w-2/5 lg:w-30% p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
@@ -17,8 +16,10 @@ const ImpactCard = ({ title, content, points, source }) => (
       target='_blank'
       rel='noreferrer'
     >
-      Learn more
-      <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='ml-2'/>
+      <div className='flex'>
+        <p>Learn more</p>
+        <ExternalLink size={18} className='ml-2' />
+      </div>
     </a>
   </div>
 );
