@@ -1,11 +1,5 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faLinkedin, 
-  faTwitter, 
-  faFacebook, 
-  faInstagram 
-} from '@fortawesome/free-brands-svg-icons';
+import { Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
 import AndroitAnalyticsLogo from '../images/AndroitAnalyticsLogo.jpeg'; 
 
 
@@ -33,16 +27,16 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a href="https://linkedin.com" className="hover:text-blue-400 transition-colors">
-                <FontAwesomeIcon icon={faLinkedin} size="lg" />
+              <Linkedin size={22} />
               </a>
               <a href="https://twitter.com" className="hover:text-blue-400 transition-colors">
-                <FontAwesomeIcon icon={faTwitter} size="lg" />
+              <Twitter size={22} />
               </a>
               <a href="https://facebook.com" className="hover:text-blue-400 transition-colors">
-                <FontAwesomeIcon icon={faFacebook} size="lg" />
+                <Facebook size={22} />
               </a>
               <a href="https://instagram.com" className="hover:text-blue-400 transition-colors">
-                <FontAwesomeIcon icon={faInstagram} size="lg" />
+              <Instagram size={22} />
               </a>
             </div>
           </div>
@@ -51,16 +45,11 @@ const Footer = () => {
           <div>
             <h3 className="text-white text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
-              {/* <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>
+              <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>
               <li><a href="#solutions" className="hover:text-white transition-colors">Solutions</a></li>
               <li><a href="#industries" className="hover:text-white transition-colors">Industries</a></li>
               <li><a href="#about" className="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li> */}
-              <h4 className="hover:text-white transition-colors">Services</h4>
-              <h4 className="hover:text-white transition-colors">Solutions</h4>
-              <h4 className="hover:text-white transition-colors">Industries</h4>
-              <h4 className="hover:text-white transition-colors">About Us</h4>
-              <h4 className="hover:text-white transition-colors">Contact</h4>
+              <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
             </ul>
           </div>
 

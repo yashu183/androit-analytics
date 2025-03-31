@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { Menu, X } from 'lucide-react';
 import AndroitAnalyticsLogo from '../images/AndroitAnalyticsLogo.jpeg'; 
 
 const Navbar = () => {
@@ -14,7 +13,6 @@ const Navbar = () => {
           <a href="/" className="flex items-center">
             <div className="flex items-center space-x-2">
               <div className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center">
-                {/* <div className="text-white text-lg font-bold">A</div> */}
                 <img src={AndroitAnalyticsLogo} alt="Company Logo" />
               </div>
               <span className="text-2xl font-bold">
@@ -28,7 +26,6 @@ const Navbar = () => {
             <a href="#impacts" className="text-gray-600 hover:text-blue-600">Industries</a>
             <a href="#services" className="text-gray-600 hover:text-blue-600">Services</a>
             <a href="#expertise" className="text-gray-600 hover:text-blue-600">Our Expertise</a>
-            {/* <a href="#resources" className="text-gray-600 hover:text-blue-600">Resources</a> */}
             <a href="#company" className="text-gray-600 hover:text-blue-600">Company</a>
             <a href="#contact" className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700">
               Contact Us
@@ -40,7 +37,7 @@ const Navbar = () => {
             className="md:hidden text-gray-600"
             onClick={() => setIsOpen(!isOpen)}
           >
-            <FontAwesomeIcon icon={isOpen ? faTimes : faBars} className="h-6 w-6" />
+            {isOpen ? <X /> : <Menu />}
           </button>
         </div>
 

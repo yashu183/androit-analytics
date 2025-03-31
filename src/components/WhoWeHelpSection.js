@@ -1,15 +1,10 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faRocket, 
-  faChartLine,
-  faBuildingColumns, 
-} from '@fortawesome/free-solid-svg-icons';
+import { Rocket, ChartLine, Landmark } from 'lucide-react';
 
 const IndustryCard = ({ icon, title, description }) => (
   <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
     <div className="text-primary-dark mb-4">
-      <FontAwesomeIcon icon={icon} className="text-3xl" />
+      {icon}
     </div>
     <h3 className="text-xl font-bold text-primary-dark mb-3">{title}</h3>
     <p className="text-gray-600 leading-relaxed">{description}</p>
@@ -19,17 +14,17 @@ const IndustryCard = ({ icon, title, description }) => (
 const WhoWeHelpSection = () => {
   const industries = [
     {
-      icon: faRocket,
+      icon: <Rocket size={30} strokeWidth={2} />,
       title: "Startups",
       description: "We help early-stage companies build scalable data solutions, turning raw data into insights for growth."
     },
     {
-      icon: faChartLine,
+      icon: <ChartLine size={30} strokeWidth={2} />,
       title: "Mid-Sized Companies",
       description: "We optimize data pipelines, implement business intelligence, and provide AI-driven decision-making tools."
     },
     {
-      icon: faBuildingColumns,
+      icon: <Landmark size={30} strokeWidth={2} />,
       title: "Large Enterprises",
       description: "We enhance existing data strategies, implement enterprise-scale AI, and drive digital transformation."
     },
