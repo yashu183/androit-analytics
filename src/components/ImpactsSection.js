@@ -2,16 +2,16 @@ import React from 'react';
 import { ExternalLink } from 'lucide-react';
 
 const ImpactCard = ({ title, content, points, source }) => (
-  <div className="bg-white w-4/5 md:w-2/5 lg:w-30% p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-    <h2 className="text-xl text-primary-dark text-center font-semibold mb-4">{title}</h2>
-    <p className="text-gray-700 mb-2">{content}</p>
-    <ul className="list-disc pl-5 mb-4">
+  <div className="bg-secondary text-white w-4/5 md:w-2/5 lg:w-30% p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+    <h2 className="text-xl text-primary text-center font-semibold mb-4">{title}</h2>
+    <p className="text-white mb-2">{content}</p>
+    <ul className="text-white list-disc pl-5 mb-4">
       {points.map((point, index) => (
         <li key={index}>{point}</li>
       ))}
     </ul>
     <a 
-      className="m-auto block w-fit bg-primary hover:bg-primary-dark text-secondary font-semibold px-4 py-2 rounded-full text-sm items-center gap-2 transition-all duration-300"
+      className="m-auto block w-fit bg-primary hover:bg-primary/90 text-secondary font-semibold px-4 py-2 rounded-full text-sm items-center gap-2 transition-all duration-300"
       href={source}
       target='_blank'
       rel='noreferrer'
@@ -62,7 +62,8 @@ const ImpactsSection = () => {
     <section id="impacts" className="py-14 min-h-[calc(100vh-80px)] bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-primary-dark mb-4">The Power of Data Science Across Industries</h2>
+          <h2 className="text-4xl font-bold mb-2">The Power of Data Science Across Industries</h2>
+          <hr className='w-6/12 m-auto border-2 border-primary'></hr>
         </div>
         
         <div className="flex flex-wrap justify-center gap-4">

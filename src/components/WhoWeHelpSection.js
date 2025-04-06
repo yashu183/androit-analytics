@@ -2,12 +2,12 @@ import React from 'react';
 import { Rocket, ChartLine, Landmark } from 'lucide-react';
 
 const IndustryCard = ({ icon, title, description }) => (
-  <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-    <div className="text-primary-dark mb-4">
+  <div className="bg-secondary text-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+    <div className="text-primary mb-4">
       {icon}
     </div>
-    <h3 className="text-xl font-bold text-primary-dark mb-3">{title}</h3>
-    <p className="text-gray-600 leading-relaxed">{description}</p>
+    <h3 className="text-xl font-bold text-primary mb-3">{title}</h3>
+    <p className="text-white leading-relaxed">{description}</p>
   </div>
 );
 
@@ -31,10 +31,11 @@ const WhoWeHelpSection = () => {
   ];
 
   return (
-    <section id="who-we-help" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section id="who-we-help">
+      <div className="container min-h-[calc(100vh-80px)] mx-auto px-4 py-20">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-primary mb-4">Who can we help?</h2>
+          <h2 className="text-4xl font-bold mb-2">Who can we help?</h2>
+          <hr className='w-2/12 m-auto border-2 border-primary'></hr>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -48,8 +49,8 @@ const WhoWeHelpSection = () => {
             Don't see your industry? Our flexible solutions can be tailored to meet the unique needs of any business.
           </p>
           <a 
-            href="#contact"
-            className="inline-block bg-primary text-secondary font-bold font-medium px-8 py-3 rounded-full hover:bg-primary-dark transition-colors duration-300"
+            href="#contact-us"
+            className="inline-block bg-primary text-secondary font-bold font-medium px-8 py-3 rounded-full hover:bg-primary/90 transition-colors duration-300"
           >
             Discuss Your Requirements
           </a>

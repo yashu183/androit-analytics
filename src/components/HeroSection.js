@@ -14,13 +14,15 @@ const HeroSection = () => {
           Your Data Holds the Answers <br /> 
           We Help You Unlock Them.
           </h1>
-          <button 
-            className="bg-primary hover:bg-primary-dark text-secondary font-semibold px-8 py-4 rounded-full text-lg inline-flex items-center gap-2 transition-all duration-300"
-            onClick={() => window.location.href = '#contact'}
+          <a 
+            href="https://forms.gle/mi9os2Yry9ZetxU69"
+            target="_blank"
+            rel="noreferrer"
+            className="bg-primary hover:bg-primary/90 text-secondary font-semibold px-8 py-4 rounded-full text-lg inline-flex items-center gap-2 transition-all duration-300"
           >
             Get a Free Consultation
             <ArrowRight />
-          </button>
+          </a>
         </div>
 
         {/* Background Effect */}

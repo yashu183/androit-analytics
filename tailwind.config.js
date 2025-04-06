@@ -11,18 +11,10 @@ module.exports = {
       },
       colors: {
         primary: {
-          DEFAULT: '#FFD700',
-          dark: '#FFC700',
-          light: '#FFE44D'
+          DEFAULT: '#ffc41b'
         },
         secondary: {
-          DEFAULT: '#1A1A1A',
-          dark: '#000000',
-          light: '#333333'
-        },
-        dark: {
-          DEFAULT: '#0B0F17',
-          light: '#1A1F2C',
+          DEFAULT: '#000'
         }
       },
       fontFamily: {

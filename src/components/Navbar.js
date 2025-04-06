@@ -1,40 +1,40 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import AndroitAnalyticsLogo from '../images/AndroitAnalyticsLogo.jpeg'; 
+import AndroitAnalyticsLogo from '../images/AndroitAnalyticsLogo.png'; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md fixed w-full z-50">
+    <nav className="bg-secondary text-white shadow-md shadow-white/10 fixed w-full z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <a href="/" className="flex items-center">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center">
+              <div className="w-12 h-12 rounded-full flex items-center justify-center">
                 <img src={AndroitAnalyticsLogo} alt="Company Logo" />
               </div>
               <span className="text-2xl font-bold">
-                Androit <span className="text-yellow-500">Analytics</span>
+                Androit <span className="text-primary">Analytics</span>
               </span>
             </div>
           </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#impacts" className="text-gray-600 hover:text-blue-600">Industries</a>
-            <a href="#services" className="text-gray-600 hover:text-blue-600">Services</a>
-            <a href="#expertise" className="text-gray-600 hover:text-blue-600">Our Expertise</a>
-            <a href="#company" className="text-gray-600 hover:text-blue-600">Company</a>
-            <a href="#contact" className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700">
+            <a href="#impacts" className="text-white hover:text-primary">Industries</a>
+            <a href="#services" className="text-white hover:text-primary">Services</a>
+            <a href="#expertise" className="text-white hover:text-primary">Our Expertise</a>
+            <a href="#contact-us" className="text-white hover:text-primary">Contact Us</a>
+            {/* <a href="#contact" className="bg-primary text-secondary font-semibold px-6 py-2 rounded-full hover:bg-primary/90">
               Contact Us
-            </a>
+            </a> */}
           </div>
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-gray-600"
+            className="md:hidden text-white-600"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X /> : <Menu />}
@@ -45,14 +45,14 @@ const Navbar = () => {
         {isOpen && (
           <div className="md:hidden py-4">
             <div className="flex flex-col space-y-4">
-              <a href="#services" className="text-gray-600 hover:text-blue-600 px-4">Services</a>
-              <a href="#solutions" className="text-gray-600 hover:text-blue-600 px-4">Solutions</a>
-              <a href="#industries" className="text-gray-600 hover:text-blue-600 px-4">Industries</a>
-              <a href="#resources" className="text-gray-600 hover:text-blue-600 px-4">Resources</a>
-              <a href="#company" className="text-gray-600 hover:text-blue-600 px-4">Company</a>
-              <a href="#contact" className="bg-blue-600 text-white px-6 py-2 mx-4 rounded-full hover:bg-blue-700 text-center">
+              <a href="#services" className="text-white hover:text-primary px-4">Services</a>
+              <a href="#solutions" className="text-white hover:text-primary px-4">Solutions</a>
+              <a href="#industries" className="text-white hover:text-primary px-4">Industries</a>
+              <a href="#resources" className="text-white hover:text-primary px-4">Resources</a>
+              <a href="#contact-us" className="text-white hover:text-primary px-4">Contact Us</a>
+              {/* <a href="#contact" className="bg-primary text-secondary px-6 py-2 mx-4 rounded-full hover:bg-primary/90 text-center">
                 Contact Us
-              </a>
+              </a> */}
             </div>
           </div>
         )}
